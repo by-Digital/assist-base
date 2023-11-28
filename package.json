@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup": "composer install --working-dir=./content",
+    "start:wp": "composer start --working-dir=./content",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
