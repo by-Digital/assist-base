@@ -1,0 +1,3 @@
+[submodule "content/wp"]
+	path = content/wp
+	url = git@github.com:by-Digital/assist-local.git

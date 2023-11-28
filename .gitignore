@@ -1,0 +1,13 @@
+# composer
+/vendor/
+
+# content
+/content/wp
+
+# env
+.env.local
+.env.stge
+.env.prod
+
+# node modules
+/node_modules/

@@ -1,0 +1,39 @@
+{
+    "name": "bydigital/host",
+    "authors": [
+        {
+            "name": "Louie Heaton",
+            "email": "dev@bydigital.io"
+        }
+    ],
+    "scripts": {
+        "start": "docker-compose -f wp/docker-compose.yml --env-file .env.local up -d",
+        "stop": "docker-compose down",
+        "restart": "composer stop && composer start"
+    },
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/wordpress-seo": "^21.5"
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}
