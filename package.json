@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "setup": "composer install --working-dir=./content",
+    "local:setup": "composer install --working-dir=./content",
     "local:start": "composer local:start --working-dir=./content",
     "local:stop": "composer local:stop --working-dir=./content",
     "local:restart": "composer local:restart --working-dir=./content",
