@@ -1,9 +1,6 @@
 # composer
 vendor/
 
-# content
-/content/wp
-
 # env
 .env.local
 .env.stge
