@@ -7,8 +7,11 @@
         }
     ],
     "scripts": {
-        "start": "docker-compose -f ./wp/docker-compose.yml --env-file ../.env.host up -d",
-        "stop": "docker-compose down",
+        "local:start": "docker-compose -f ./wp/docker-compose.local.yml --env-file ../.env.local up -d",
+        "local:stop": "docker-compose -f ./wp/docker-compose.local.yml --env-file ../.env.local down",
+        "local:restart": "composer local:stop && composer local:start",
+        "start": "docker-compose -f ./wp/docker-compose.yml --env-file ../.env up -d",
+        "stop": "docker-compose -f ./wp/docker-compose.yml --env-file ../.env down",
         "restart": "composer stop && composer start"
     },
     "repositories":[
